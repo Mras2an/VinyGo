@@ -13,7 +13,7 @@ VinyGo is an open hardawe, meca, and source project to make a vinyl recorder. Pl
 └── 04_Utils
 ```
 
-Doc: All the documentations, 3D and hardware files is in there.
+Doc: All the documentations is in there.
 
 3D Modeling: all 3D files.
 
