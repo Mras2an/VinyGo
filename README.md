@@ -5,6 +5,7 @@ VinyGo is an open hardawe, meca, and source project to make a vinyl recorder. Pl
 
 <img src=“”>
 <img width="964" alt="VinyGo" src="https://raw.githubusercontent.com/Mras2an/VinyGo/master/01_3D%20Modeling/VinyGO_3D_V2.JPG">
+
 ## Project architecture
 ```
 .
