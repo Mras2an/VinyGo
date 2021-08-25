@@ -3,6 +3,8 @@
 ## What is VinyGo
 VinyGo is an open hardawe, meca, and source project to make a vinyl recorder. Please read the documentations in "doc" repertory.
 
+<img src=“https://raw.githubusercontent.com/Mras2an/VinyGo/master/01_3D%20Modeling/VinyGO_3D_V2.JPG”>
+
 ## Project architecture
 ```
 .
@@ -25,5 +27,9 @@ Utils: it is a set of essential tools for the project.
 
 ## LICENSE TERMS:
 
-Please cite the project.
+Copyright (c) 2021. Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+
+    please cite the project.
+
+THIS SOFTWARE IS PROVIDED BY THE REGENTS AND CONTRIBUTORS 'AS IS' AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, GO TO NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED.
 
