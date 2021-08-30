@@ -26,11 +26,4 @@ Software: This is the full code for the WROOM32 MCU module and LCD.
 
 Utils: it is a set of essential tools for the project.
 
-## LICENSE TERMS:
-
-Copyright (c) 2021. Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
-
-    please cite the project.
-
-THIS SOFTWARE IS PROVIDED BY THE REGENTS AND CONTRIBUTORS 'AS IS' AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, GO TO NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED.
 
