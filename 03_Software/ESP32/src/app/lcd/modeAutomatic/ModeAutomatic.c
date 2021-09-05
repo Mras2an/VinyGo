@@ -40,10 +40,6 @@ void ModeAutomatic_init()
     SpeedVinyl_set(12);
     SpeedVinyl_getString(tmp);
     Lcd_sendTxtCmd(strlen(tmp), "t1", tmp);
-    //    memset(tmp, '\0', 20);
-    //    SpeedVinyl_set33or45(33);
-    //    SpeedVinyl_get33or45String(tmp);
-    //    Lcd_sendTxtCmd(strlen(tmp), "t2", tmp);
 }
 
 static void ModeAutomatic_stop()
@@ -273,34 +269,4 @@ void ModeAutomatic_cmdReceived(unsigned int type, unsigned int action, unsigned 
         Worm_convertFreqToTimeInString(MERGE_BYTES_TO_WORD(data[strlen("convert") + 1], data[strlen("convert")]), string);
         Lcd_sendTxtCmd(strlen(string), "t5", string);
     }
-
-    //    if(strncmp((const char *)data, "trmDown", strlen("trmDown")) == 0) {
-    //        Debug_info("\n");
-    //        SpeedVinyl_increase33or45();
-    //        char tmp[10];
-    //        memset(tmp, '\0', 10);
-    //        SpeedVinyl_get33or45String(tmp);
-    //        Lcd_sendTxtCmd(strlen(tmp), "t2", tmp);
-    //        char string[10];
-    //        memset(string, '\0', 10);
-    //        Worm_convertFreqToTimeInString(this->motorFreq, string);
-    //        Lcd_sendTxtCmd(strlen(string), "t5", string);
-    //        //        VR_ERROR_CHECK(Gpio_set(CMD_MOTOR_EN1, VR_LEVEL_HIGH));
-    //        //        VR_ERROR_CHECK(Gpio_set(CMD_MOTOR_INA1, VR_LEVEL_HIGH));
-    //    }
-    //
-    //    if(strncmp((const char *)data, "trmUp", strlen("trmUp")) == 0) {
-    //        Debug_info("\n");
-    //        SpeedVinyl_decrease33or45(1);
-    //        char tmp[10];
-    //        memset(tmp, '\0', 10);
-    //        SpeedVinyl_get33or45String(tmp);
-    //        Lcd_sendTxtCmd(strlen(tmp), "t2", tmp);
-    //        char string[10];
-    //        memset(string, '\0', 10);
-    //        Worm_convertFreqToTimeInString(this->motorFreq, string);
-    //        Lcd_sendTxtCmd(strlen(string), "t5", string);
-    //        //        VR_ERROR_CHECK(Gpio_set(CMD_MOTOR_EN1, VR_LEVEL_LOW));
-    //        //        VR_ERROR_CHECK(Gpio_set(CMD_MOTOR_INA1, VR_LEVEL_LOW));
-    //    }
 }

@@ -48,30 +48,6 @@ void Heater_setPotvalue(int value)
     }
 }
 
-//void Heater_saveValue(int value)
-//{
-//    //if((value > 0) && (value < 200)) {
-//        char tmp[10];
-//        memset(tmp, '\0', 10);
-//        sprintf(tmp, "%d", value);
-//        Fs_write(FILE_NAME_HEATER_INFO, tmp, FILE_NAME_HEATER_INFO);
-//    //}
-//}
-
-//float Heater_readValue(void)
-//{
-//    char * val = Fs_read(FILE_NAME_HEATER_INFO, FILE_NAME_HEATER_INFO);
-//    float heaterValue = 0.0;
-//
-//    if(val != NULL)  {
-//        heaterValue = atof(val);
-//        Debug_info("%f\n", heaterValue);
-//        OsFree(val);
-//    }
-//
-//    return heaterValue;
-//}
-
 int Heater_getValue(void)
 {
     return this->heaterValue;
@@ -84,7 +60,6 @@ void Heater_setValue(int value)
 
 void Heater_getValueForLcd(char * buffer)
 {
-    //
     float vOut = 0;
 
     switch(this->heaterValue) {

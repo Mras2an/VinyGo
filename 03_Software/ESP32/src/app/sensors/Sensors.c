@@ -21,7 +21,6 @@ static void Sensors_initDataTask(void);
 
 void Sensors_init()
 {
-    //VR_ERROR_CHECK(Gpio_configure(SENSOR_TRM, VR_GPIO_MODE_INPUT, VR_GPIO_PULL_NONE));
     VR_ERROR_CHECK(Gpio_configure(HEAD_DETECT, VR_GPIO_MODE_INPUT, VR_GPIO_PULL_NONE));
     VR_ERROR_CHECK(Gpio_configure(HALL_DETECT_7P, VR_GPIO_MODE_INPUT, VR_GPIO_PULL_NONE));
     VR_ERROR_CHECK(Gpio_configure(HALL_DETECT_12P, VR_GPIO_MODE_INPUT, VR_GPIO_PULL_NONE));
@@ -35,26 +34,22 @@ static void Sensors_TASK_DATA()
     memset(sensors, 0, 5);
 
     for(;;) {
-        //Gpio_get(SENSOR_TRM, &sensors[0]);
         Gpio_get(HEAD_DETECT, &sensors[1]);
         Gpio_get(HALL_DETECT_7P, &sensors[2]);
         Gpio_get(HALL_DETECT_12P, &sensors[3]);
         Gpio_get(TRAY_DETECTION, &sensors[4]);
 
         if(sensors[1]) {
-            //printf("HEAD_DETECT\n");
             Lcd_sendWaveForm(2, 2, 100);
         } else {
             Lcd_sendWaveForm(2, 2, 140);
         }
 
         if(!sensors[2]) {
-            //printf("HALL_DETECT_7P\n");
             Lcd_sendWaveForm(2, 0, 0);
         } else {
             Lcd_sendWaveForm(2, 0, 40);
 
-            //if((Lcd_getMode() == LCD_MENU_MODE_AUTOMATIC) && (!MotorHandling_getDirection())) {
             if(SpeedVinyl_get() == 7) {
                 if(!MotorHandling_getDirection() && (Lcd_getMode() != LCD_MENU_MODE_TESTS)) {
                     MotorHandling_stop();
@@ -84,12 +79,10 @@ static void Sensors_TASK_DATA()
         }
 
         if(!sensors[3]) {
-            //printf("HALL_DETECT_12P\n");
             Lcd_sendWaveForm(2, 1, 50);
         } else {
             Lcd_sendWaveForm(2, 1, 90);
 
-            //if((Lcd_getMode() == LCD_MENU_MODE_AUTOMATIC) && (!MotorHandling_getDirection())) {
             if(SpeedVinyl_get() != 7) {
                 if(!MotorHandling_getDirection()&& (Lcd_getMode() != LCD_MENU_MODE_TESTS)) {
                     MotorHandling_stop();
@@ -119,7 +112,6 @@ static void Sensors_TASK_DATA()
         }
 
         if(sensors[4]) {
-            //printf("TRAY_DETECTION\n");
             Lcd_sendWaveForm(2, 3, 150);
         } else {
             Lcd_sendWaveForm(2, 3, 190);

@@ -5,9 +5,7 @@
 
 void Heater_init();
 void Heater_setPotvalue(int value);
-//void Heater_saveValue(int value);
 int Heater_getValue(void);
-//float Heater_readValue(void);
 void Heater_increaseValue(void);
 void Heater_increaseValueAndNoStart(void);
 void Heater_decreaseValueAndNoStart(void);

@@ -21,18 +21,6 @@ int SpeedVinyl_get()
     return this->value;
 }
 
-//int SpeedVinyl_get33or45()
-//{
-//    return this->val3345;
-//}
-//
-//void SpeedVinyl_get33or45String(char * buffer)
-//{
-//    if(this->val3345 == 45)
-//        memcpy(buffer, "45", strlen("45"));
-//    else
-//        memcpy(buffer, "33", strlen("33"));
-//}
 void SpeedVinyl_getString(char * buffer)
 {
     if(this->value == 7) {
@@ -46,12 +34,6 @@ void SpeedVinyl_getString(char * buffer)
         Debug_info("Vinyl config on 12p\n");
     }
 }
-
-//void SpeedVinyl_getAllString(char * buffer)
-//{
-//    SpeedVinyl_getString(buffer);
-//    SpeedVinyl_get33or45String(&buffer[strlen(buffer)]);
-//}
 
 void SpeedVinyl_increase()
 {
@@ -81,24 +63,4 @@ void SpeedVinyl_set(int val)
         this->value = 12;
 }
 
-//void SpeedVinyl_set33or45(int val)
-//{
-//    if((this->val3345 == 33) || (this->val3345 == 45))
-//        this->val3345 = val;
-//    else
-//        this->val3345 = 33;
-//}
-//
-//void SpeedVinyl_increase33or45()
-//{
-//    if(this->val3345 == 33)
-//        this->val3345 = 45;
-//    else
-//        this->val3345 = 33;
-//}
-//
-//void SpeedVinyl_decrease33or45()
-//{
-//    SpeedVinyl_increase();
-//}
 

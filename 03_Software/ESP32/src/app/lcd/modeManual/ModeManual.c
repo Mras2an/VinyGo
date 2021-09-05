@@ -125,14 +125,10 @@ void ModeManual_cmdReceived(unsigned int type, unsigned int action, unsigned int
         memset(tmp, '\0', 10);
         SpeedVinyl_getString(tmp);
         Lcd_sendTxtCmd(strlen(tmp), "t2", tmp);
-        //        VR_ERROR_CHECK(Gpio_set(CMD_MOTOR_EN1, VR_LEVEL_HIGH));
-        //        VR_ERROR_CHECK(Gpio_set(CMD_MOTOR_INA1, VR_LEVEL_HIGH));
     }
 
     if(strncmp((const char *)data, "trmStop", strlen("trmStop")) == 0) {
         Debug_info("\n");
-        //        VR_ERROR_CHECK(Gpio_set(CMD_MOTOR_EN1, VR_LEVEL_HIGH));
-        //        VR_ERROR_CHECK(Gpio_set(CMD_MOTOR_INA1, VR_LEVEL_HIGH));
     }
 
     if(strncmp((const char *)data, "trmUp", strlen("trmUp")) == 0) {
@@ -142,8 +138,6 @@ void ModeManual_cmdReceived(unsigned int type, unsigned int action, unsigned int
         memset(tmp, '\0', 10);
         SpeedVinyl_getString(tmp);
         Lcd_sendTxtCmd(strlen(tmp), "t2", tmp);
-        //        VR_ERROR_CHECK(Gpio_set(CMD_MOTOR_EN1, VR_LEVEL_LOW));
-        //        VR_ERROR_CHECK(Gpio_set(CMD_MOTOR_INA1, VR_LEVEL_LOW));
     }
 
     if(strncmp((const char *)data, "vacuumDown", strlen("vacuumDown")) == 0) {

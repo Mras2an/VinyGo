@@ -58,8 +58,6 @@ int ServoMotor_getDirection()
 
 void ServoMotor_getUpOrDown(char * buffer)
 {
-    //    uint32_t direction[2] = {0x00, 0x00};
-    //    Gpio_get(HEAD_DETECT, &direction[0]);
     uint32_t sensor[2] = {0x00, 0x00};
     Gpio_get(HEAD_DETECT, &sensor[0]);
 

@@ -24,7 +24,6 @@ void Initialize_init(void)
     Fs_init();
     CpuDelay_init();
     Ota_init();
-    //Wifi_saveSSIDAndPass("xxxx", "xxxxx");
     Lcd_init();
     Sensors_init();
     Heater_init();
