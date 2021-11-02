@@ -45,12 +45,6 @@ void Worm_convertFreqToTimeInString(int freq, char * buffer)
         //useless time is already in 12p
     }
 
-    //    if(SpeedVinyl_get33or45() == 33) {
-    //        //useless time is already in 33TRM
-    //    } else if(SpeedVinyl_get33or45() == 45) {
-    //        time /= 1.36;
-    //    }
-
     if(this->value == 8) {
         //useless worm is already in 8mm
     } else if(this->value == 2) {
